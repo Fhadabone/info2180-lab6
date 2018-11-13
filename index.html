@@ -1,35 +1,10 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title> Dictionary </title>
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <script type="text/javascript" src="app.js"></script>
+     <head>
+      <title>Dictionary Lookup</title>
+      <script type="text/javascript" src="search.js"></script>
     </head>
-    <body>
-        <div id="heading">
-            <h1>Web Dictionary</h1>
-        </div>
-        <div>
-            <button id="search" type="button">Search</button>
-        </div>
-        <div id="result">
-        </div>
+     <body>
+      <button id="button">Search</button>
     </body>
-    <script>
-      document.getElementById("search").addEventListener("click", exerise);  
-      
-      function exerise(){
-          
-          var xhttp = new XMLHttpRequest();
-          xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-              alert(this.response);
-    }
-  };
- 
-   xhttp.open("GET", "request.php?q=definition", true);
-   xhttp.send();
-}
-      
-        
-    </script>
-</html>
+ </html>

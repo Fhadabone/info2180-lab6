@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div class="header">
+  <h1>Web Dictionary</h1>
+</div>
+
+
+ <button id="myBtn">Search</button>
+
+
+<script>
+document.getElementById("myBtn").addEventListener("click", d);
+
+function d() {
+   
+    
+    
+   
+    var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+        
+                alert( this.responseText);
+            }
+        };
+        xmlhttp.open("GET", 'request.php/request.php?q=definition');
+        xmlhttp.send();
+}
+
+</script>
+
+</body>
+
+</html> 
